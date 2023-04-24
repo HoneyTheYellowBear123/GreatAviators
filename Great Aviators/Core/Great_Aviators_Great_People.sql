@@ -18,7 +18,10 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(invented helicopters and airships) - grants a helicopter with one promotion level, and 1 aluminum per turn.
 		('GREAT_PERSON_AVIATOR_GUSTAV_RASMUS', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(sounds like he came up with the idea of laser guided missiles? he makes more sense as land anti aircraft but dont worry about it) - someone to give navy units with anti aicraft power an increase to that value
 		('GREAT_PERSON_AVIATOR_NEIL_ARMSTRONG', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- ( buzz we love u too) -- all spaceport projects grant a culture bonus
-		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'); --(father of rocket propulsion) - +20% production towards spaceport projects
+		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(father of rocket propulsion) - +20% production towards spaceport projects
+		
+		('POLICY_GREAT_AVIATOR_SMALL', 'KIND_POLICY'),
+		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'); 
 
 INSERT INTO TypeTags
 		(Type, Tag)
@@ -26,7 +29,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'CLASS_LANDCIVILIAN');
 
 INSERT INTO Units
 		(UnitType,				Cost, BaseMoves, BaseSightRange, ZoneOfControl, Domain,			FormationClass,				Name,								Description,				CanCapture, CanRetreatWhenCaptured, CanTrain)
-VALUES  ('UNIT_GREAT_AVIATOR',	1,		4,			2,				'false', 'DOMAIN_LAND', 'FORMATION_CLASS_CIVILIAN', 'LOC_UNIT_GREAT_AVIATOR_NAME', 'LOC_UNIT_GREAT_AVIATOR_DESCRIPTION', 'False',		 'True',		 'False');
+VALUES  ('UNIT_GREAT_AVIATOR',	1,		4,			2,				0, 'DOMAIN_LAND', 'FORMATION_CLASS_CIVILIAN', 'LOC_UNIT_GREAT_AVIATOR_NAME', 'LOC_UNIT_GREAT_AVIATOR_DESCRIPTION',			0,		 1,		 0);
 
 INSERT INTO UnitAiInfos
 		(UnitType, AiType)
@@ -39,7 +42,7 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,			Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'ERA_RENAISSANCE', 'M',    1,             'false',                 'DOMAIN_LAND',                    1);
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'ERA_RENAISSANCE', 'M',    1,            0,                 'DOMAIN_LAND',                    1);
 
 
 
@@ -171,11 +174,6 @@ VALUES  ('CIVIC_EXPLORATION',	'EXPLORATION_GREAT_AVIATOR_MODIFIERID'),
 		('CIVIC_SPACE_RACE',	'SPACE_RACE_GREAT_AVIATOR_MODIFIERID');
 
 
-
-INSERT INTO Types
-		(Type, Kind)
-VALUES	('POLICY_GREAT_AVIATOR_SMALL', 'KIND_POLICY'),
-		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'); 
 
 INSERT INTO Policies
 		(PolicyType,							Name,												Description,							PrereqCivic,					GovernmentSlotType)
