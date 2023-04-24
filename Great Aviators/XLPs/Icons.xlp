@@ -25,6 +25,13 @@
 			<m_ObjectName text="GreatPeople105_Aviator"/>
 		</Element>
 
+		
+
+		<Element>
+			<m_EntryID text="FontIcons_Aviator"/>
+			<m_ObjectName text="FontIcons_Aviator"/>
+		</Element>
+
 	</m_Entries>
 	<m_AllowedPlatforms>
 		<Element>WINDOWS</Element>

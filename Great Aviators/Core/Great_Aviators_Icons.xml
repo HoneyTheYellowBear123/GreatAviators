@@ -10,6 +10,8 @@
 
 		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="105"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople105_AVIATOR"/>
 		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="216"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople216_AVIATOR"/>
+
+		<Row Name="ICON_ATLAS_FONT_ICON_AVIATOR"       Baseline="6" IconSize="22"   IconsPerRow="11" IconsPerColumn="25" Filename="FontIcons_Aviator.dds"/>
 		
 
 
@@ -21,6 +23,7 @@
 		<Row Name="ICON_GREAT_PERSON_CLASS_AVIATOR" Atlas="ICON_ATLAS_GREAT_PERSON_CLASS_AVIATOR" Index="0"/>
 
 		<Row Name="ICON_GENERIC_GREAT_PERSON_INDIVIDUAL_AVIATOR"				Atlas="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	Index="0"/>
+		<Row Name="GreatAviator"										 Atlas="ICON_ATLAS_FONT_ICON_AVIATOR"  Index="0"/>
 
 
 
@@ -28,7 +31,7 @@
 
 
 		<!-- reusing old stuff -->
-		<!-- Row Name="GreatAviator" Atlas="ICON_ATLAS_FONT_ICON" Index="160"/-->
+		
 
 
 	</IconDefinitions>
