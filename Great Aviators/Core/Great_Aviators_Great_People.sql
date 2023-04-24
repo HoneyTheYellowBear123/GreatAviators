@@ -27,7 +27,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 
 --TO DO: add pseudoyield ai favored stuff
 
-INSERT INTO PseudoYield
+INSERT INTO PseudoYields
 		(PseudoYieldType, DefaultValue)
 VALUES  ('PSEUDOYIELD_GPP_AVIATOR', 0.5);
 
