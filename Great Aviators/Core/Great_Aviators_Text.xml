@@ -13,6 +13,21 @@
 			<Text>Great Aviator unit description</Text>
 		</Row>
 
+		<Row Tag="LOC_POLICY_GREAT_AVIATOR_SMALL_NAME" Language="en_US">
+			<Text>great aviator policy small name</Text>
+		</Row>
+		<Row Tag="LOC_POLICY_GREAT_AVIATOR_SMALL_DESCRIPTION" Language="en_US">
+			<Text>great aviator policy small desc</Text>
+		</Row>
+		<Row Tag="LOC_POLICY_GREAT_AVIATOR_BIG_NAME" Language="en_US">
+			<Text>great aviator policy big name</Text>
+		</Row>
+		<Row Tag="LOC_POLICY_GREAT_AVIATOR_BIG_DESCRIPTION" Language="en_US">
+			<Text>great aviator policy big desc</Text>
+		</Row>
+
+		
+
 
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY" Language="en_US">
 			<Text>Sir George Cayley</Text>

@@ -20,18 +20,18 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_NEIL_ARMSTRONG', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- ( buzz we love u too) -- all spaceport projects grant a culture bonus
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'); --(father of rocket propulsion) - +20% production towards spaceport projects
 
-INSERT INTO UnitAiInfos
-		(UnitType, AiType)
-VALUES  ('UNIT_GREAT_AVIATOR', 'UNITTYPE_CIVILIAN'),
-		('UNIT_GREAT_AVIATOR', 'UNITAI_LEADER');
-
 INSERT INTO TypeTags
 		(Type, Tag)
 VALUES  ('UNIT_GREAT_AVIATOR', 'CLASS_LANDCIVILIAN');
 
 INSERT INTO Units
-		(UnitType, Cost, BaseMoves, BaseSightRange, ZoneOfControl, Domain, FormationClass, Name, Description, CanCapture, CanRetreatWhenCaptured, CanTrain)
-VALUES  ('UNIT_GREAT_AVIATOR', 1, 4, 2, 'false', 'DOMAIN_LAND'. 'FORMATION_CLASS_CIVILIAN', 'LOC_UNIT_GREAT_AVIATOR_NAME', 'LOC_UNIT_GREAT_AVIATOR_DESCRIPTION', 'False', 'True', 'False');
+		(UnitType,				Cost, BaseMoves, BaseSightRange, ZoneOfControl, Domain,			FormationClass,				Name,								Description,				CanCapture, CanRetreatWhenCaptured, CanTrain)
+VALUES  ('UNIT_GREAT_AVIATOR',	1,		4,			2,				'false', 'DOMAIN_LAND', 'FORMATION_CLASS_CIVILIAN', 'LOC_UNIT_GREAT_AVIATOR_NAME', 'LOC_UNIT_GREAT_AVIATOR_DESCRIPTION', 'False',		 'True',		 'False');
+
+INSERT INTO UnitAiInfos
+		(UnitType, AiType)
+VALUES  ('UNIT_GREAT_AVIATOR', 'UNITTYPE_CIVILIAN'),
+		('UNIT_GREAT_AVIATOR', 'UNITAI_LEADER');
 
 INSERT INTO GreatPersonClasses
 		(GreatPersonClassType,			 Name,									 UnitType,			 DistrictType,			PseudoYieldType,		 IconString,			ActionIcon)

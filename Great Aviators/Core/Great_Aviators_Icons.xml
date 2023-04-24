@@ -6,7 +6,7 @@
 	<IconTextureAtlases>
 
 		
-		<Row Name="ICON_ATLAS_GREAT_AVIATOR" IconSize="90"  IconsPerRow="1" IconsPerColumn="1" Filename="XP2_Tech30_bigcopy.dds"/>
+		<Row Name="ICON_ATLAS_GREAT_AVIATOR" IconSize="90"  IconsPerRow="1" IconsPerColumn="1" Filename="great_aviator_symbol_base.dds"/>
 		
 
 
@@ -23,7 +23,7 @@
 		
 		
 		<!-- reusing old stuff -->
-		<Row Name="GreatAviator" Atlas="ICON_ATLAS_FONT_ICON" Index="160"/>
+		<!-- Row Name="GreatAviator" Atlas="ICON_ATLAS_FONT_ICON" Index="160"/-->
 
 
 	</IconDefinitions>
