@@ -17,7 +17,7 @@
 			<Text>great aviator policy small name</Text>
 		</Row>
 		<Row Tag="LOC_POLICY_GREAT_AVIATOR_SMALL_DESCRIPTION" Language="en_US">
-			<Text>great aviator policy small desc</Text>
+			<Text>+10 [Icon_GreatAviator] Great Aviator points per turn</Text>
 		</Row>
 		<Row Tag="LOC_POLICY_GREAT_AVIATOR_BIG_NAME" Language="en_US">
 			<Text>great aviator policy big name</Text>
