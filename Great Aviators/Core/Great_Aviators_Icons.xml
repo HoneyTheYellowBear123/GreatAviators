@@ -3,5 +3,38 @@
 <!-- Author: mitch -->
 <!-- DateCreated: 4/20/2023 2:54:44 PM -->
 <GameData>
+	<IconTextureAtlases>
+
+		
+		<Row Name="ICON_ATLAS_GREAT_AVIATOR" IconSize="90"  IconsPerRow="1" IconsPerColumn="1" Filename="XP2_Tech30_bigcopy.dds"/>
+		
+
+
+	</IconTextureAtlases>
+
+	<IconDefinitions>
+		
+		<!-- things I am introducing-->
+		<Row Name="ICON_GREAT_PERSON_CLASS_AVIATOR" Atlas="ICON_ATLAS_GREAT_AVIATOR" Index="0"/>
+		
+
+		
+		
+		
+		
+		<!-- reusing old stuff -->
+		<Row Name="GreatAviator" Atlas="ICON_ATLAS_FONT_ICON" Index="160"/>
+
+
+	</IconDefinitions>
+
+	<IconAliases>
+		<Row Name="'ICON_POLICY_GREAT_AVIATOR_BIG'" OtherName="ICON_POLICY_WILDCARD"/>
+		<Row Name="'ICON_POLICY_GREAT_AVIATOR_SMALL'" OtherName="ICON_POLICY_WILDCARD"/>
+
+
+	</IconAliases>
+
+
 
 </GameData>

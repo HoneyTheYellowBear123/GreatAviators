@@ -1,6 +1,8 @@
 
 --Ideally, everyone has a few passive points but heavy investments can be made elsewhere
 
+--TO DO: add a project to aerodromes called space camp that awards great aviator points when finished
+
 --Certain buildings granting points 
 INSERT INTO Building_GreatPersonPoints
 		(BuildingType, GreatPersonClassType, PointsPerTurn)
