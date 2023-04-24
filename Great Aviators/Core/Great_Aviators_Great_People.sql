@@ -36,3 +36,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 1, 4, 2, 'false', 'DOMAIN_LAND'. 'FORMATION_CLASS
 INSERT INTO GreatPersonClasses
 		(GreatPersonClassType,			 Name,									 UnitType,			 DistrictType,			PseudoYieldType,		 IconString,			ActionIcon)
 VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'UNIT_GREAT_AVIATOR', 'DISTRICT_AERODROME', 'PSEUDOYIELD_GPP_AVIATOR', '[ICON_GreatAviator]', 'ICON_UNITOPERATION_AVIATOR_ACTION');
+
+INSERT INTO GreatPersonIndividuals
+		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,			Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius)
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'ERA_RENAISSANCE', 'M',    1,             'false',                 'DOMAIN_LAND',                    1);
