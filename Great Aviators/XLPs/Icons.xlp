@@ -11,8 +11,18 @@
 	<m_Entries>
 
 		<Element>
-			<m_EntryID text="great_aviator_symbol_base_90"/>
-			<m_ObjectName text="great_aviator_symbol_base_90"/>
+			<m_EntryID text="GreatPeopleClass90_Aviator"/>
+			<m_ObjectName text="GreatPeopleClass90_Aviator"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatPeople216_Aviator"/>
+			<m_ObjectName text="GreatPeople216_Aviator"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatPeople105_Aviator"/>
+			<m_ObjectName text="GreatPeople105_Aviator"/>
 		</Element>
 
 	</m_Entries>
