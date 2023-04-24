@@ -29,10 +29,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core" />
+    <Folder Include="ArtDefs" />
     <Folder Include="XLPs" />
     <Folder Include="Textures" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ArtDefs\UserInterface.artdef">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Core\Great_Aviators_Great_People.sql">
       <SubType>Content</SubType>
     </Content>
@@ -40,6 +44,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Core\Great_Aviators_Text.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FontIcons_Aviator.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\FontIcons_Aviator.tex">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Textures\GreatPeople105_Aviator.dds">
