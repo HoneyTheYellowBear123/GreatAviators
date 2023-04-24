@@ -2,6 +2,7 @@ INSERT INTO Types
 		(Type, Kind)
 VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_CLASS_AVIATOR', 'KIND_GREAT_PERSON_CLASS'),
+		('PSEUDOYIELD_GPP_AVIATOR', 'KIND_PSEUDOYIELD'),
 		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'KIND_GREAT_PERSON_INDIVIDUAL'),  --(father of aviation) -  boosts for flight, advanced flight, lasers, rocketry, and stealth tech
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- grants a biplane and 1 oil per turn
 		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --somebody to instantly build a hangar, hangar bonus production
@@ -22,6 +23,13 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		
 		('POLICY_GREAT_AVIATOR_SMALL', 'KIND_POLICY'),
 		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'); 
+
+
+--TO DO: add pseudoyield ai favored stuff
+
+INSERT INTO PseudoYield
+		(PseudoYieldType, DefaultValue)
+VALUES  ('PSEUDOYIELD_GPP_AVIATOR', 0.5);
 
 INSERT INTO TypeTags
 		(Type, Tag)
