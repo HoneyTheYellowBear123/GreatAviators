@@ -50,6 +50,38 @@
 			<m_ObjectName text="UnitActionsAviator38"/>
 		</Element>
 
+	
+
+		<Element>
+			<m_EntryID text="GreatAviatorUnitIcon256"/>
+			<m_ObjectName text="GreatAviatorUnitIcon256"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatAviatorUnitIcon80"/>
+			<m_ObjectName text="GreatAviatorUnitIcon80"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatAviatorUnitIcon50"/>
+			<m_ObjectName text="GreatAviatorUnitIcon50"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatAviatorUnitIcon38"/>
+			<m_ObjectName text="GreatAviatorUnitIcon38"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatAviatorUnitIcon32"/>
+			<m_ObjectName text="GreatAviatorUnitIcon32"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="GreatAviatorUnitIcon22"/>
+			<m_ObjectName text="GreatAviatorUnitIcon22"/>
+		</Element>
+
 	</m_Entries>
 	<m_AllowedPlatforms>
 		<Element>WINDOWS</Element>

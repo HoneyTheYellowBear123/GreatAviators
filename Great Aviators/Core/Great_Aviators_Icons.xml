@@ -18,6 +18,14 @@
 		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="80"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator80.dds"/>
 		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="50"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator50.dds"/>
 		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="38"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator38.dds"/>
+
+
+		<Row Name="ICON_ATLAS_UNIT_GREAT_AVIATOR" IconSize="22"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatAviatorUnitIcon22.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_GREAT_AVIATOR" IconSize="32"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatAviatorUnitIcon32.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_GREAT_AVIATOR" IconSize="38"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatAviatorUnitIcon38.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_GREAT_AVIATOR" IconSize="50"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatAviatorUnitIcon50.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_GREAT_AVIATOR" IconSize="80"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatAviatorUnitIcon80.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_GREAT_AVIATOR" IconSize="256"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatAviatorUnitIcon256.dds"/>
 		
 		
 
@@ -33,6 +41,8 @@
 		<Row Name="GreatAviator"										 Atlas="ICON_ATLAS_FONT_ICON_AVIATOR"  Index="0"/>
 
 		<Row Name="ICON_UNITOPERATION_AVIATOR_ACTION"   				Atlas="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"   Index="0"/>
+
+		<Row Name="ICON_UNIT_GREAT_AVIATOR"                 Atlas="ICON_ATLAS_UNIT_GREAT_AVIATOR" Index="0"/>
 
 
 
