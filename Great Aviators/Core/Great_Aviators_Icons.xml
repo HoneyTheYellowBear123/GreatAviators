@@ -8,8 +8,8 @@
 		
 		<Row Name="ICON_ATLAS_GREAT_PERSON_CLASS_AVIATOR" IconSize="90"  IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeopleClass90_Aviator.dds"/>
 
-		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="105"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople105_AVIATOR"/>
-		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="216"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople216_AVIATOR"/>
+		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="105"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople105_Aviator"/>
+		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="216"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople216_Aviator"/>
 
 		<Row Name="ICON_ATLAS_FONT_ICON_AVIATOR"       Baseline="6" IconSize="22"   IconsPerRow="11" IconsPerColumn="25" Filename="FontIcons_Aviator.dds"/>
 
