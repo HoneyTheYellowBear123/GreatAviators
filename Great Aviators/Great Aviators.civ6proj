@@ -52,6 +52,42 @@
     <Content Include="Textures\FontIcons_Aviator.tex">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon22.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon22.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon256.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon256.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon32.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon32.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon38.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon38.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon50.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon50.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon80.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\GreatAviatorUnitIcon80.tex">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Textures\GreatPeople105_Aviator.dds">
       <SubType>Content</SubType>
     </Content>

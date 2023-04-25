@@ -22,10 +22,18 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(father of rocket propulsion) - +20% production towards spaceport projects
 		
 		('POLICY_GREAT_AVIATOR_SMALL', 'KIND_POLICY'),
-		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'); 
+		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'),
+		
+		--fake eras to customize great person cost
+		('FAKE_ERA_GREAT_AVIATORS_1', 'KIND_ERA'); 
 
 
 --TO DO: add pseudoyield ai favored stuff
+
+INSERT INTO Eras
+		(EraType,							 Name,								Description,						ChronologyIndex, WarmongerPoints, GreatPersonBaseCost,	 EraTechBackgroundTexture, EraCivicBackgroundTexture, WarmongerLevelDescription, EmbarkedUnitStrength, EraTechBackgroundTextureOffsetX, EraCivicBackgroundTextureOffsetX, TechTreeLayoutMethod)
+VALUES  ('FAKE_ERA_GREAT_AVIATORS_1', 'LOC_FAKE_ERA_GREAT_AVIATORS_1_NAME', 'LOC_FAKE_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  69420,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
+
 
 INSERT INTO PseudoYields
 		(PseudoYieldType, DefaultValue)
@@ -50,7 +58,7 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,			Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'ERA_RENAISSANCE', 'M',    1,            0,                 'DOMAIN_LAND',                    1);
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'FAKE_ERA_GREAT_AVIATORS_1', 'M',    1,            0,                 'DOMAIN_LAND',                    1);
 
 
 
