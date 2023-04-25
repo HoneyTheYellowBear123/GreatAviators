@@ -30,6 +30,27 @@
 			<m_ObjectName text="FontIcons_Aviator"/>
 		</Element>
 
+		<Element>
+			<m_EntryID text="UnitActionsAviator256"/>
+			<m_ObjectName text="UnitActionsAviator256"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="UnitActionsAviator80"/>
+			<m_ObjectName text="UnitActionsAviator80"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="UnitActionsAviator50"/>
+			<m_ObjectName text="UnitActionsAviator50"/>
+		</Element>
+
+		<Element>
+			<m_EntryID text="UnitActionsAviator38"/>
+			<m_ObjectName text="UnitActionsAviator38"/>
+		</Element>
+
+
 	</m_Entries>
 	<m_AllowedPlatforms>
 		<Element>WINDOWS</Element>

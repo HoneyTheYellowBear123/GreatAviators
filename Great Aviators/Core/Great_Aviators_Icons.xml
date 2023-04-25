@@ -12,6 +12,13 @@
 		<Row Name="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	IconSize="216"	IconsPerRow="1" IconsPerColumn="1" Filename="GreatPeople216_AVIATOR"/>
 
 		<Row Name="ICON_ATLAS_FONT_ICON_AVIATOR"       Baseline="6" IconSize="22"   IconsPerRow="11" IconsPerColumn="25" Filename="FontIcons_Aviator.dds"/>
+
+
+		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="256"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator256.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="80"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator80.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="50"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator50.dds"/>
+		<Row Name="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"    IconSize="38"   IconsPerRow="1" IconsPerColumn="1" Filename="UnitActionsAviator38.dds"/>
+		
 		
 
 
@@ -24,6 +31,8 @@
 
 		<Row Name="ICON_GENERIC_GREAT_PERSON_INDIVIDUAL_AVIATOR"				Atlas="ICON_ATLAS_GREAT_PERSON_INDIVIDUAL_AVIATOR"	Index="0"/>
 		<Row Name="GreatAviator"										 Atlas="ICON_ATLAS_FONT_ICON_AVIATOR"  Index="0"/>
+
+		<Row Name="ICON_UNITOPERATION_AVIATOR_ACTION"   				Atlas="ICON_ATLAS_UNIT_ACTIONS_AVIATOR"   Index="0"/>
 
 
 
