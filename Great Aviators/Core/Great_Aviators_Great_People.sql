@@ -24,15 +24,18 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('POLICY_GREAT_AVIATOR_SMALL', 'KIND_POLICY'),
 		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'),
 		
-		--fake eras to customize great person cost
-		('FAKE_ERA_GREAT_AVIATORS_1', 'KIND_ERA'); 
+		
+		('DUMMY_ERA_GREAT_AVIATORS_1', 'KIND_ERA'); 
 
 
 --TO DO: add pseudoyield ai favored stuff
 
+
+--so here's the catch: great people cost is determined ONLY by what era they are in. I want aviator to be a little more expensive because I wanted tech and civic to passively give a few points, but offer bigger points for districts/buildings.
+--SO we will create a fake era that never occurs and has no technology, and in localization we'll name it after eras that already exist so that it won't stick out ;)
 INSERT INTO Eras
 		(EraType,							 Name,								Description,						ChronologyIndex, WarmongerPoints, GreatPersonBaseCost,	 EraTechBackgroundTexture, EraCivicBackgroundTexture, WarmongerLevelDescription, EmbarkedUnitStrength, EraTechBackgroundTextureOffsetX, EraCivicBackgroundTextureOffsetX, TechTreeLayoutMethod)
-VALUES  ('FAKE_ERA_GREAT_AVIATORS_1', 'LOC_FAKE_ERA_GREAT_AVIATORS_1_NAME', 'LOC_FAKE_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  69420,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
+VALUES  ('DUMMY_ERA_GREAT_AVIATORS_1', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  69420,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
 
 
 INSERT INTO PseudoYields
@@ -58,7 +61,7 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,			Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'FAKE_ERA_GREAT_AVIATORS_1', 'M',    1,            0,                 'DOMAIN_LAND',                    1);
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'M',    1,            0,                 'DOMAIN_LAND',                    1);
 
 
 
