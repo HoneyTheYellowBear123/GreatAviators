@@ -31,11 +31,11 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 --TO DO: add pseudoyield ai favored stuff
 
 
---so here's the catch: great people cost is determined ONLY by what era they are in. I want aviator to be a little more expensive because I wanted tech and civic to passively give a few points, but offer bigger points for districts/buildings.
---SO we will create a fake era that never occurs and has no technology, and in localization we'll name it after eras that already exist so that it won't stick out ;)
+--so here's the catch: great people cost is determined ONLY by what era they are in. I want aviator to be a little more expensive so that people can't just buy them.
+--SO we will create a fake era that never occurs and has no technology, and in localization we'll name it after eras that already exist so that it won't stick out as a faker ;)
 INSERT INTO Eras
 		(EraType,							 Name,								Description,						ChronologyIndex, WarmongerPoints, GreatPersonBaseCost,	 EraTechBackgroundTexture, EraCivicBackgroundTexture, WarmongerLevelDescription, EmbarkedUnitStrength, EraTechBackgroundTextureOffsetX, EraCivicBackgroundTextureOffsetX, TechTreeLayoutMethod)
-VALUES  ('DUMMY_ERA_GREAT_AVIATORS_1', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  69420,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
+VALUES  ('DUMMY_ERA_GREAT_AVIATORS_1', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  100,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
 
 
 INSERT INTO PseudoYields
@@ -56,12 +56,37 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'UNITTYPE_CIVILIAN'),
 		('UNIT_GREAT_AVIATOR', 'UNITAI_LEADER');
 
 INSERT INTO GreatPersonClasses
-		(GreatPersonClassType,			 Name,									 UnitType,			 DistrictType,			PseudoYieldType,		 IconString,			ActionIcon)
-VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'UNIT_GREAT_AVIATOR', 'DISTRICT_AERODROME', 'PSEUDOYIELD_GPP_AVIATOR', '[ICON_GreatAviator]', 'ICON_UNITOPERATION_AVIATOR_ACTION');
+		(GreatPersonClassType,			 Name,									 UnitType,					DistrictType,			PseudoYieldType,		 IconString,			ActionIcon                      )
+VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'UNIT_GREAT_AVIATOR',		 'DISTRICT_AERODROME',			 'PSEUDOYIELD_GPP_AVIATOR', '[ICON_GreatAviator]', 'ICON_UNITOPERATION_AVIATOR_ACTION');
+
+
+
+
 
 INSERT INTO GreatPersonIndividuals
-		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,			Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'M',    1,            0,                 'DOMAIN_LAND',                    1);
+		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,					Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTextOverride)
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'M',    1,            0,							  'DOMAIN_LAND',                    0,                          NULL,                       'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  );
+
+INSERT INTO GreatPersonIndividualActionModifiers
+		(GreatPersonIndividualType,								 ModifierId,														AttachmentTargetType)
+VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_2',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON');
+
+INSERT INTO Modifiers
+		(ModifierId,											ModifierType,									RunOnce, Permanent)
+VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
+		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_2', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
+		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
+		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     );
+
+INSERT INTO ModifierArguments
+		(ModifierId,											 Name,         Value)
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TECH_FLIGHT'),
+		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_2',  'TechType', 'TECH_ADVANCED_FLIGHT'),
+		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3',  'TechType', 'TECH_LASERS'),
+		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',  'TechType', 'TECH_STEALTH_TECHNOLOGY');
 
 
 

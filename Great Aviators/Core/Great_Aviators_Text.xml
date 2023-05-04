@@ -2,11 +2,11 @@
 	<LocalizedText>
 
 		<Row Tag="LOC_GREAT_PERSON_CLASS_AVIATOR_NAME" Language="en_US">
-			<Text>Great Aviator class name</Text>
+			<Text>Great Aviator</Text>
 		</Row>
 
 		<Row Tag="LOC_UNIT_GREAT_AVIATOR_NAME" Language="en_US">
-			<Text>Great Aviator unit name</Text>
+			<Text>Great Aviator</Text>
 		</Row>
 
 		<Row Tag="LOC_UNIT_GREAT_AVIATOR_DESCRIPTION" Language="en_US">
@@ -31,6 +31,9 @@
 
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY" Language="en_US">
 			<Text>Sir George Cayley</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION" Language="en_US">
+			<Text>Triggers the [Icon_TechBoosted] Eureka moments for Flight, Advanced Flight, Lasers, and Stealth Technology.</Text>
 		</Row>
 	</LocalizedText>
 </GameData>
