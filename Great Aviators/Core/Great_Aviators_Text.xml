@@ -35,5 +35,13 @@
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION" Language="en_US">
 			<Text>Triggers the [Icon_TechBoosted] Eureka moments for Flight, Advanced Flight, Lasers, and Stealth Technology.</Text>
 		</Row>
+
+
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT" Language="en_US">
+			<Text>Oliver Wright</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION" Language="en_US">
+			<Text>Grants a biplane unit and +1 [ICON_RESOURCE_OIL] Oil per turn.</Text>
+		</Row>
 	</LocalizedText>
 </GameData>

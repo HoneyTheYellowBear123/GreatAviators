@@ -25,7 +25,8 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'),
 		
 		
-		('DUMMY_ERA_GREAT_AVIATORS_1', 'KIND_ERA'); 
+		('DUMMY_ERA_GREAT_AVIATORS_1', 'KIND_ERA'),
+		('DUMMY_ERA_GREAT_AVIATORS_2', 'KIND_ERA'); 
 
 
 --TO DO: add pseudoyield ai favored stuff
@@ -35,7 +36,8 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 --SO we will create a fake era that never occurs and has no technology, and in localization we'll name it after eras that already exist so that it won't stick out as a faker ;)
 INSERT INTO Eras
 		(EraType,							 Name,								Description,						ChronologyIndex, WarmongerPoints, GreatPersonBaseCost,	 EraTechBackgroundTexture, EraCivicBackgroundTexture, WarmongerLevelDescription, EmbarkedUnitStrength, EraTechBackgroundTextureOffsetX, EraCivicBackgroundTextureOffsetX, TechTreeLayoutMethod)
-VALUES  ('DUMMY_ERA_GREAT_AVIATORS_1', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  100,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
+VALUES  ('DUMMY_ERA_GREAT_AVIATORS_1', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_DESC',       69420         ,    0,                  100,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' ),
+		('DUMMY_ERA_GREAT_AVIATORS_2', 'LOC_DUMMY_ERA_GREAT_AVIATORS_2_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_2_DESC',       69421         ,    0,                  100,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
 
 
 INSERT INTO PseudoYields
@@ -65,28 +67,37 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,					Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresNoMilitaryUnit, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTileHighlighting, ActionEffectTextOverride)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'M',    1,            0,				                    1,      			  NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ); --LOC_GREATPERSON_ACTION_NAME_RETIRE
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2', 'M',    1,            0,				                    0,      			  NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
+		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'M',    1,            1,				                    0,      			  NULL,                                  NULL,                          'DISTRICT_AERODROME',                        1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ); 
 
 INSERT INTO GreatPersonIndividualActionModifiers
 		(GreatPersonIndividualType,								 ModifierId,														AttachmentTargetType)
 VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_2',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
-		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON');
+		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		
+		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREATPERSON_GRANT_1_OIL_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON');
 
 INSERT INTO Modifiers
 		(ModifierId,											ModifierType,									RunOnce, Permanent)
 VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
 		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_2', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
 		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
-		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     );
+		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1     ),
+
+		( 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID', 'MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE',       1,        1     );
 
 INSERT INTO ModifierArguments
 		(ModifierId,											 Name,         Value)
 VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TECH_FLIGHT'),
 		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_2',  'TechType', 'TECH_ADVANCED_FLIGHT'),
 		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3',  'TechType', 'TECH_LASERS'),
-		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',  'TechType', 'TECH_STEALTH_TECHNOLOGY');
+		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',  'TechType', 'TECH_STEALTH_TECHNOLOGY'),
+		
+		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'UnitType', 'UNIT_BIPLANE'),
+		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'Experience', 0);
 
 
 
