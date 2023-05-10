@@ -46,6 +46,13 @@
 
 
 
+		<Row Name="ICON_UNIT_GREAT_AVIATOR_PORTRAIT"               Atlas="ICON_ATLAS_UNIT_PORTRAITS_2"   Index="50"/>
+		<Row Name="ICON_UNIT_GREAT_AVIATOR_PORTRAIT_F"                 Atlas="ICON_ATLAS_UNIT_PORTRAITS_2" Index="51"/>
+		<Row Name="ICON_UNIT_GREAT_AVIATOR_PORTRAIT_ERA_MODERN"                   Atlas="ICON_ATLAS_UNIT_PORTRAITS_2" Index="50"/>
+		<Row Name="ICON_UNIT_GREAT_AVIATOR_PORTRAIT_ERA_MODERN_F"                 Atlas="ICON_ATLAS_UNIT_PORTRAITS_2" Index="51"/>
+
+
+
 
 
 
