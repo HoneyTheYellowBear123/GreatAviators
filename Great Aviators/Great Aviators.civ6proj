@@ -34,6 +34,12 @@
     <Folder Include="Textures" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ArtDefs\Units.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ArtDefs\Units_Great_People.artdef">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ArtDefs\UserInterface.artdef">
       <SubType>Content</SubType>
     </Content>
