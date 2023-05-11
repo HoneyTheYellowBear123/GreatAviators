@@ -3,6 +3,7 @@ INSERT INTO Types
 VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_CLASS_AVIATOR', 'KIND_GREAT_PERSON_CLASS'),
 		('PSEUDOYIELD_GPP_AVIATOR', 'KIND_PSEUDOYIELD'),
+		('FEATURE_MIDDLE_OF_THE_OCEAN', 'KIND_FEATURE'),
 		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'KIND_GREAT_PERSON_INDIVIDUAL'),  --$(father of aviation) -  boosts for flight, advanced flight, lasers, rocketry, and stealth tech
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- $grants a biplane and 1 oil per turn
 		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --somebody to instantly build a hangar, hangar bonus production
@@ -40,6 +41,7 @@ VALUES  ('DUMMY_ERA_GREAT_AVIATORS_1', 'LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME', 'L
 		('DUMMY_ERA_GREAT_AVIATORS_2', 'LOC_DUMMY_ERA_GREAT_AVIATORS_2_NAME', 'LOC_DUMMY_ERA_GREAT_AVIATORS_2_DESC',       69421         ,    0,                  100,                    'TechTree_BGModern', 'TechTree_BGFuture',      'LOC_WARMONGER_LEVEL_NONE', 69,                       0,                                  0,                            'Cost' );      
 
 
+
 INSERT INTO PseudoYields
 		(PseudoYieldType, DefaultValue)
 VALUES  ('PSEUDOYIELD_GPP_AVIATOR', 0.5);
@@ -66,9 +68,10 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 
 INSERT INTO GreatPersonIndividuals
-		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,					Gender, ActionCharges, ActionRequiresOwnedTile, ActionRequiresNoMilitaryUnit, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTileHighlighting, ActionEffectTextOverride)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2', 'M',    1,            0,				                    0,      			  NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
-		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'M',    1,            1,				                    0,      			  NULL,                                  NULL,                          'DISTRICT_AERODROME',                        1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ); 
+		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,					Gender, ActionCharges, ActionRequiresOwnedTile,       ActionRequiresUnownedTile,         ActionRequiresNoMilitaryUnit, ActionRequiresOnOrAdjacentFeatureType, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTileHighlighting, ActionEffectTextOverride)
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2', 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
+		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2', 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1', 'F',    1,            0,				                    0,										0,      			  'FEATURE_REEF',						NULL,                                  NULL,                          NULL,                        1,                 'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART_ACTION'  ); 
 
 INSERT INTO GreatPersonIndividualActionModifiers
 		(GreatPersonIndividualType,								 ModifierId,														AttachmentTargetType)
@@ -78,7 +81,9 @@ VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GE
 		(	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 		
 		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
-		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREATPERSON_GRANT_1_OIL_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON');
+		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREATPERSON_GRANT_1_OIL_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		
+		(   'GREAT_PERSON_AVIATOR_AMELIA_EARHART', 'GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID', 'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON');
 
 INSERT INTO Modifiers
 		(ModifierId,											ModifierType,									RunOnce, Permanent, SubjectRequirementSetId)
@@ -87,7 +92,9 @@ VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYE
 		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_3', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1,          NULL     ),
 		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1,          NULL     ),
 
-		( 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',	 'MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE',       1,        1,          NULL     );
+		( 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',	 'MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE',       1,        1,          NULL     ),
+		
+		( 'GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',	 'MODIFIER_PLAYER_GRANT_YIELD',							  1,        1,          NULL     );
 		
 		--( 'GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_MODIFIERID',		'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',			 1,        1,  'REQUIREMENTS_UNIT_IS_ANTI_AIRCRAFT_LAND'   );
 
@@ -99,7 +106,11 @@ VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TE
 		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4',  'TechType', 'TECH_STEALTH_TECHNOLOGY'),
 		
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'UnitType', 'UNIT_BIPLANE'),
-		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'Experience', 0);
+		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'Experience', 0),
+		
+		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'Amount', 1500),
+		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'Scale', 1),
+		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'YieldType', 'YIELD_CULTURE');
 		
 		--('GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_MODIFIERID',  'AbilityType', 'GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_ABILITY_ANTI_AIRCRAFT_BONUS');
 

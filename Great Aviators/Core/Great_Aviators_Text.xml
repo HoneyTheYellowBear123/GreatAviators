@@ -44,6 +44,13 @@
 			<Text>Grants a biplane unit and +1 [ICON_RESOURCE_OIL] Oil per turn.</Text>
 		</Row>
 
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART" Language="en_US">
+			<Text>Amelia Earhart</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART_ACTION" Language="en_US">
+			<Text>Grants 1500 [ICON_CULTURE] Culture on standard speed. Must be activated on or adjacent to a reef.</Text>
+		</Row>
+
 		<!--LOC_GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_COMBAT_BONUS_PREVIEW-->
 	</LocalizedText>
 </GameData>
