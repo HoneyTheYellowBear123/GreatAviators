@@ -13,7 +13,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN', 'KIND_GREAT_PERSON_INDIVIDUAL'), --red baron - fighters gain +5 combat strength
 		('GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER', 'KIND_GREAT_PERSON_INDIVIDUAL'),-- (operated first airline? came up with first airline?) - aerodrome and its buildings now make gold instead of costing gold to maintain. (they don't cost much so probably have them pay out a lot) 
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ gain 1500 culture (on standard speed) grants sufferage (or extra culture if its already been discovered)
-		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- instantly build a hangar and airport, airports bonus production 
+		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ instantly build a hangar and airport, airports bonus production 
 		('GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(shot an aircraft with a regular cannon like a real playah) - land anti aircraft a bonus
 		('GREAT_PERSON_AVIATOR_FLOYD_FOGLEMAN', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(invented a good paper airplane airfoil this is awesome) - some air foil researcher to give a bonus to production of aircraft
 		('GREAT_PERSON_AVIATOR_CLÉMENT_ADER', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(first person to envision what would be considered a modern aircraft carrier) - someone to grant bonus production and strength to aircraft carriers
@@ -71,8 +71,9 @@ INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,									Gender, ActionCharges, ActionRequiresOwnedTile,       ActionRequiresUnownedTile,         ActionRequiresNoMilitaryUnit, ActionRequiresOnOrAdjacentFeatureType, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTileHighlighting, ActionEffectTextOverride)
 VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				 'F',    1,            0,				                    0,										0,      			  'FEATURE_REEF',						NULL,                                  NULL,                          NULL,                        1,                 'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_1',		 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',		 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_SPACEPORT',        1,                 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_ACTION'  ); 
 
 INSERT INTO GreatPersonIndividualActionModifiers
@@ -89,6 +90,10 @@ VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GE
 		(	'GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
 		
 		(   'GREAT_PERSON_AVIATOR_AMELIA_EARHART', 'GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID', 'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+
+		(	'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
+		(	'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
+		(	'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_AVIATOR_BUILD_AIRPORT_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
 		
 		(   'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID', 'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE');
 
@@ -105,6 +110,9 @@ VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYE
 		( 'GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',	 'MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE',       1,        1,          NULL     ),
 		
 		( 'GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',	 'MODIFIER_PLAYER_GRANT_YIELD',							  1,        1,          NULL     ),
+
+		( 'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',	 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',       1,        1,          NULL     ),
+		( 'GREAT_PERSON_AVIATOR_BUILD_AIRPORT_MODIFIERID',	 'MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE',       1,        1,          NULL     ),
 		
 		( 'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID',	 'MODIFIER_PLAYER_CITIES_ADJUST_SPACE_RACE_PROJECTS_PRODUCTION', 0,        1,          NULL     );
 		
@@ -128,6 +136,11 @@ VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TE
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'Amount', 1500),
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'Scale', 1),
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'YieldType', 'YIELD_CULTURE'),
+
+		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',  'YieldType', 'YIELD_PRODUCTION'),
+		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',  'BuildingType', 'BUILDING_AIRPORT'),
+		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',  'Amount', 4),
+		('GREAT_PERSON_AVIATOR_BUILD_AIRPORT_MODIFIERID',  'BuildingType', 'BUILDING_AIRPORT'),
 		
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID',  'Amount', 50);
 		
