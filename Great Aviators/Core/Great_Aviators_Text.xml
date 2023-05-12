@@ -44,6 +44,13 @@
 			<Text>Grants a biplane unit and +1 [ICON_RESOURCE_OIL] Oil per turn.</Text>
 		</Row>
 
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT" Language="en_US">
+			<Text>Wilbur Wright</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION" Language="en_US">
+			<Text>Instantly builds a hangar in this district. Hangars grant +2 [ICON_PRODUCTION] Production.</Text>
+		</Row>
+
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART" Language="en_US">
 			<Text>Amelia Earhart</Text>
 		</Row>

@@ -6,7 +6,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('FEATURE_MIDDLE_OF_THE_OCEAN', 'KIND_FEATURE'),
 		('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'KIND_GREAT_PERSON_INDIVIDUAL'),  --$(father of aviation) -  boosts for flight, advanced flight, lasers, rocketry, and stealth tech
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- $grants a biplane and 1 oil per turn
-		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --somebody to instantly build a hangar, hangar bonus production
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$somebody to instantly build a hangar, hangar bonus production
 		('GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(union officer of balloon reconnaissance)- observation balloons and drones + 1 sight and grants a free balloon
 		('GREAT_PERSON_AVIATOR_CHARLES_E_TAYLOR', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(mechanic for the wright brothers) - some mechanic to give a bonus to aircraft healing
 		('GREAT_PERSON_AVIATOR_RENE_LORIN', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(accent on second e, patened the ramjet engine) - +2 range for all aircraft
@@ -20,7 +20,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(invented helicopters and airships) - grants a helicopter with one promotion level, and 1 aluminum per turn.
 		('GREAT_PERSON_AVIATOR_GUSTAV_RASMUS', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(sounds like he came up with the idea of laser guided missiles? he makes more sense as land anti aircraft but dont worry about it) - someone to give navy units with anti aicraft power an increase to that value
 		('GREAT_PERSON_AVIATOR_NEIL_ARMSTRONG', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- ( buzz we love u too) -- all spaceport projects grant a culture bonus
-		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(father of rocket propulsion) - +50% production towards spaceport projects
+		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (father of rocket propulsion) - +50% production towards spaceport projects yes I know he already exists but have you seen the rocket equation it is delicate and beautiful
 		
 		('POLICY_GREAT_AVIATOR_SMALL', 'KIND_POLICY'),
 		('POLICY_GREAT_AVIATOR_BIG', 'KIND_POLICY'),
@@ -71,8 +71,9 @@ INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,									Gender, ActionCharges, ActionRequiresOwnedTile,       ActionRequiresUnownedTile,         ActionRequiresNoMilitaryUnit, ActionRequiresOnOrAdjacentFeatureType, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTileHighlighting, ActionEffectTextOverride)
 VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				 'F',    1,            0,				                    0,										0,      			  'FEATURE_REEF',						NULL,                                  NULL,                          NULL,                        1,                 'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_1',		 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_SPACEPORT',        1,                 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_ACTION'  ); 
+		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',		 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_SPACEPORT',        1,                 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_ACTION'  ); 
 
 INSERT INTO GreatPersonIndividualActionModifiers
 		(GreatPersonIndividualType,								 ModifierId,														AttachmentTargetType)
@@ -83,6 +84,9 @@ VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GE
 		
 		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 		(	'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT', 'GREATPERSON_GRANT_1_OIL_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+
+		(	'GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_HANGAR_BONUS_PRODUCTION_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
+		(	'GREAT_PERSON_AVIATOR_WILBUR_WRIGHT', 'GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
 		
 		(   'GREAT_PERSON_AVIATOR_AMELIA_EARHART', 'GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID', 'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 		
@@ -96,6 +100,9 @@ VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYE
 		( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_4', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST',       1,        1,          NULL     ),
 
 		( 'GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',	 'MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE',       1,        1,          NULL     ),
+
+		( 'GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_HANGAR_BONUS_PRODUCTION_MODIFIERID',	 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',       1,        1,          NULL     ),
+		( 'GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',	 'MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE',       1,        1,          NULL     ),
 		
 		( 'GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',	 'MODIFIER_PLAYER_GRANT_YIELD',							  1,        1,          NULL     ),
 		
@@ -112,6 +119,11 @@ VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TE
 		
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'UnitType', 'UNIT_BIPLANE'),
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_MODIFIERID',  'Experience', 0),
+
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_HANGAR_BONUS_PRODUCTION_MODIFIERID',  'YieldType', 'YIELD_PRODUCTION'),
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_HANGAR_BONUS_PRODUCTION_MODIFIERID',  'BuildingType', 'BUILDING_HANGAR'),
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_HANGAR_BONUS_PRODUCTION_MODIFIERID',  'Amount', 2),
+		('GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',  'BuildingType', 'BUILDING_HANGAR'),
 		
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'Amount', 1500),
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART_MODIFIERID',  'Scale', 1),
