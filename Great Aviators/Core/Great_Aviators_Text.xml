@@ -55,7 +55,7 @@
 			<Text>Percival E. Fansler</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER_ACTION" Language="en_US">
-			<Text>Hangars and Airports provide +6 [ICON_GOLD] Gold and +10 [ICON_GOLD] Gold respectfully (after operating costs).</Text>
+			<Text>Hangars and Airports cost nothing to maintain and instead provide +6 [ICON_GOLD] Gold and +10 [ICON_GOLD] Gold respectfully.</Text>
 		</Row>
 
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART" Language="en_US">
