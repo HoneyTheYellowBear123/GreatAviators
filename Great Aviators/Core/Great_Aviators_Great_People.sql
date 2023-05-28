@@ -19,6 +19,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_CLÉMENT_ADER', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(first person to envision what would be considered a modern aircraft carrier) - someone to grant bonus production and strength to aircraft carriers
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(invented helicopters and airships) - grants a helicopter with one promotion level, and 1 aluminum per turn.
 		('GREAT_PERSON_AVIATOR_GUSTAV_RASMUS', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(sounds like he came up with the idea of laser guided missiles? he makes more sense as land anti aircraft but dont worry about it) - someone to give navy units with anti aicraft power an increase to that value
+		('GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'KIND_GREAT_PERSON_INDIVIDUAL'), --first to fly over everest, grant a culture bonus for adjacent mountains (bonus if those mountains are tundra or snowy)
 		('GREAT_PERSON_AVIATOR_NEIL_ARMSTRONG', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- ( buzz we love u too) -- all spaceport projects grant a culture bonus
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (father of rocket propulsion) - +50% production towards spaceport projects yes I know he already exists but have you seen the rocket equation it is delicate and beautiful
 		
@@ -68,15 +69,16 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 
 INSERT INTO GreatPersonIndividuals
-		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,									Gender, ActionCharges, ActionRequiresOwnedTile,       ActionRequiresUnownedTile,         ActionRequiresNoMilitaryUnit, ActionRequiresOnOrAdjacentFeatureType, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType, ActionEffectTileHighlighting, ActionEffectTextOverride)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,                        0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
-		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER',		'LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',		'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				 'F',    1,            0,				                    0,										0,      			  'FEATURE_REEF',						NULL,                                  NULL,                          NULL,                        1,                 'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',				 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',		 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_SPACEPORT',        1,                 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_ACTION'  ),
-		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT',	 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_1',				 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',        1,                 'LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_ACTION'  );  
+		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,									Gender, ActionCharges, ActionRequiresOwnedTile,       ActionRequiresUnownedTile,         ActionRequiresNoMilitaryUnit, ActionRequiresOnOrAdjacentFeatureType, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType,         ActionRequiresAdjacentMountain, ActionEffectTileHighlighting, ActionEffectTextOverride)
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,										0,							0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
+		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER',		'LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',		'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				 'F',    1,            0,				                    0,										0,      			  'FEATURE_REEF',						NULL,                                  NULL,                          NULL,										0,							1,                 'LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',				 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT',	 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',				 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'LOC_GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON',	 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_1',	 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,										1,							1,                 'LOC_GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON_ACTION'  ),
+		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_2',		 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_SPACEPORT',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_ACTION'  );  
 
 INSERT INTO GreatPersonIndividualActionModifiers
 		(GreatPersonIndividualType,								 ModifierId,														AttachmentTargetType)
@@ -99,11 +101,18 @@ VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GE
 		(	'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
 		(	'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_AVIATOR_BUILD_HANGAR_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
 		(	'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'GREAT_PERSON_AVIATOR_BUILD_AIRPORT_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
-		
-		(   'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID', 'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE'),
-		
+
 		(	'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
-		(	'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'); --unique modifierid to prevent conflicts with other mods
+		(	'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
+
+		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
+		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
+		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_DESERTMOUNTAIN_CULTURE',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
+		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_TUNDRAMOUNTAIN_CULTURE',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
+		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_SNOWMOUNTAIN_CULTURE',				'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
+		
+		(   'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID', 'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE');
+		 
 
 INSERT INTO Modifiers
 		(ModifierId,											ModifierType,									RunOnce, Permanent, SubjectRequirementSetId)
@@ -124,13 +133,21 @@ VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYE
 
 		( 'GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',	 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE',       1,        1,          NULL     ),
 		( 'GREAT_PERSON_AVIATOR_BUILD_AIRPORT_MODIFIERID',	 'MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE',       1,        1,          NULL     ),
+
+		( 'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_MODIFIERID',	 'MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE',       1,        1,          NULL     ),
+		( 'GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',		'MODIFIER_PLAYER_ADJUST_FREE_RESOURCE_EXTRACTION',       1,        1,          NULL     ),
+
+		( 'GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
+		( 'GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
+		( 'GREAT_AVIATOR_ADJACENT_DESERTMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
+		( 'GREAT_AVIATOR_ADJACENT_TUNDRAMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
+		( 'GREAT_AVIATOR_ADJACENT_SNOWMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
 		
-		( 'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID',	 'MODIFIER_PLAYER_CITIES_ADJUST_SPACE_RACE_PROJECTS_PRODUCTION', 0,        1,          NULL     ),
+		( 'GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID',	 'MODIFIER_PLAYER_CITIES_ADJUST_SPACE_RACE_PROJECTS_PRODUCTION', 0,        1,          NULL     );
 		
 		--( 'GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_MODIFIERID',		'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',			 1,        1,  'REQUIREMENTS_UNIT_IS_ANTI_AIRCRAFT_LAND'   );
 
-		( 'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_MODIFIERID',	 'MODIFIER_PLAYER_UNIT_GRANT_UNIT_WITH_EXPERIENCE',       1,        1,          NULL     ),
-		( 'GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',		'MODIFIER_PLAYER_ADJUST_FREE_RESOURCE_EXTRACTION',       1,        1,          NULL     );
+	
 
 INSERT INTO ModifierArguments
 		(ModifierId,											 Name,         Value)
@@ -162,13 +179,32 @@ VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TE
 		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',  'BuildingType', 'BUILDING_AIRPORT'),
 		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG_AIRPORT_BONUS_PRODUCTION_MODIFIERID',  'Amount', 4),
 		('GREAT_PERSON_AVIATOR_BUILD_AIRPORT_MODIFIERID',  'BuildingType', 'BUILDING_AIRPORT'),
-		
-		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID',  'Amount', 50),
-		
+
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_MODIFIERID',  'UnitType', 'UNIT_HELICOPTER'),
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_MODIFIERID',  'Experience', -1),
 		('GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',  'ResourceType', 'RESOURCE_ALUMINUM'),
-		('GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',  'Amount', 1);
+		('GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',  'Amount', 1),
+
+		('GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',  'YieldType', 'YIELD_CULTURE'),
+		('GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',  'TerrainType', 'TERRAIN_GRASS_MOUNTAIN'),
+		('GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',  'Amount', 100),
+		('GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',  'YieldType', 'YIELD_CULTURE'),
+		('GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',  'TerrainType', 'TERRAIN_PLAINS_MOUNTAIN'),
+		('GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',  'Amount', 100),
+		('GREAT_AVIATOR_ADJACENT_DESERTMOUNTAIN_CULTURE',  'YieldType', 'YIELD_CULTURE'),
+		('GREAT_AVIATOR_ADJACENT_DESERTMOUNTAIN_CULTURE',  'TerrainType', 'TERRAIN_DESERT_MOUNTAIN'),
+		('GREAT_AVIATOR_ADJACENT_DESERTMOUNTAIN_CULTURE',  'Amount', 100),
+		('GREAT_AVIATOR_ADJACENT_TUNDRAMOUNTAIN_CULTURE',  'YieldType', 'YIELD_CULTURE'),
+		('GREAT_AVIATOR_ADJACENT_TUNDRAMOUNTAIN_CULTURE',  'TerrainType', 'TERRAIN_TUNDRA_MOUNTAIN'),
+		('GREAT_AVIATOR_ADJACENT_TUNDRAMOUNTAIN_CULTURE',  'Amount', 250),
+		('GREAT_AVIATOR_ADJACENT_SNOWMOUNTAIN_CULTURE',  'YieldType', 'YIELD_CULTURE'),
+		('GREAT_AVIATOR_ADJACENT_SNOWMOUNTAIN_CULTURE',  'TerrainType', 'TERRAIN_SNOW_MOUNTAIN'),
+		('GREAT_AVIATOR_ADJACENT_SNOWMOUNTAIN_CULTURE',  'Amount', 250),
+
+
+		
+		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_MODIFIERID',  'Amount', 50);
+		
 		
 		--('GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_MODIFIERID',  'AbilityType', 'GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_ABILITY_ANTI_AIRCRAFT_BONUS');
 
