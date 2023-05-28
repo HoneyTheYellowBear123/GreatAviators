@@ -72,6 +72,14 @@
 			<Text>Instantly builds a hangar and airport in this district. Airports grant +4 [ICON_PRODUCTION] Production.</Text>
 		</Row>
 
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_FLOYD_FOGLEMAN" Language="en_US">
+			<Text>Floyd Fogleman</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_FLOYD_FOGLEMAN_ACTION" Language="en_US">
+			<Text>+20% [ICON_PRODUCTION] Production towards aircraft.</Text>
+		</Row>
+		
+
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT" Language="en_US">
 			<Text>Hermann Ganswindt</Text>
 		</Row>
@@ -83,7 +91,7 @@
 			<Text>Douglas Douglas-Hamilton</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON_ACTION" Language="en_US">
-			<Text>Grants 100 [ICON_CULTURE] Culture for each adjacent grass, plains, or desert mountain, and 250 [ICON_CULTURE] Culture or each adjacent tundra or snow mountain.</Text>
+			<Text>Grants 150 [ICON_CULTURE] Culture for each adjacent grass, plains, or desert mountain, and 300 [ICON_CULTURE] Culture or each adjacent tundra or snow mountain.</Text>
 		</Row>
 
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD" Language="en_US">
