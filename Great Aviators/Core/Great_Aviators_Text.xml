@@ -51,6 +51,20 @@
 			<Text>Instantly builds a hangar in this district. Hangars grant +2 [ICON_PRODUCTION] Production.</Text>
 		</Row>
 
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE" Language="en_US">
+			<Text>Thaddeus S. C. Lowe</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE_ACTION" Language="en_US">
+			<Text>Grants an observation balloon unit. Observation balloons and drones gain +1 vision.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_THADDEUS_S_C_LOWE_VISION_NAME" Language="en_US">
+			<Text>Thaddeus S. C. Lowe's Legacy</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_THADDEUS_S_C_LOWE_VISION_DESC" Language="en_US">
+			<Text>+1 vision (Thaddeus S. C. Lowe) </Text>
+		</Row>
+
+
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER" Language="en_US">
 			<Text>Percival E. Fansler</Text>
 		</Row>
