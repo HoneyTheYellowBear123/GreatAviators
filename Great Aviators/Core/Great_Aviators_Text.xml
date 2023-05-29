@@ -64,6 +64,26 @@
 			<Text>+1 vision (Thaddeus S. C. Lowe) </Text>
 		</Row>
 
+		
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_RENE_LORIN" Language="en_US">
+			<Text>René Lorin</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_RENE_LORIN_ACTION" Language="en_US">
+			<Text>Air fighter units gain +1 [ICON_Range] attack range and air bomber units gain +2 [ICON_Range] attack range.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER_NAME" Language="en_US">
+			<Text>Rene's Range</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER_DESC" Language="en_US">
+			<Text>+2 [ICON_Range] attack range (René Lorin)</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_NAME" Language="en_US">
+			<Text>Rene's Range</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_DESC" Language="en_US">
+			<Text>+1 [ICON_Range] attack range (René Lorin)</Text>
+		</Row>
+
 
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN" Language="en_US">
 			<Text>Manfred Albrecht Freiherr von Richthofen</Text>
@@ -134,7 +154,7 @@
 			<Text>Clement-time</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ABILITY_CLEMENT_ADER_COMBAT_BONUS_DESC" Language="en_US">
-			<Text>+10 [ICON_STRENGTH] combat strength (Clement Ader)</Text>
+			<Text>+10 [ICON_STRENGTH] combat strength (Clément Ader)</Text>
 		</Row>
 		
 
