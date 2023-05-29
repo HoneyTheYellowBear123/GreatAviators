@@ -131,6 +131,21 @@
 			<Text>Grants a helicopter unit with one promotion level and +1 [ICON_RESOURCE_ALUMINUM] Aluminum per turn.</Text>
 		</Row>
 
+		
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_GUSTAV_RASMUS" Language="en_US">
+			<Text>Hermann Ganswindt</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_GUSTAV_RASMUS_ACTION" Language="en_US">
+			<Text>Naval units with an anti aircraft stat gain +10 anti aircraft strength.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_GUSTAV_RASMUS_ANTI_AIRCRAFT_BOATS_NAME" Language="en_US">
+			<Text>Ghost of Gustav Rasmus</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_GUSTAV_RASMUS_ANTI_AIRCRAFT_BOATS_DESC" Language="en_US">
+			<Text>+10 anti aircraft strength</Text>
+		</Row>
+		
+		
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON" Language="en_US">
 			<Text>Douglas Douglas-Hamilton</Text>
 		</Row>
