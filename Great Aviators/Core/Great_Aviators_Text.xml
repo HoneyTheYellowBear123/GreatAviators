@@ -65,6 +65,20 @@
 		</Row>
 
 
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN" Language="en_US">
+			<Text>Manfred Albrecht Freiherr von Richthofen</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN_ACTION" Language="en_US">
+			<Text>Air fighter class units gain +10 [ICON_STRENGTH] combat strength against other aircraft.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RED_BARON_COMBAT_BONUS_NAME" Language="en_US">
+			<Text>Bloodlust of the Baron</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RED_BARON_COMBAT_BONUS_DESC" Language="en_US">
+			<Text>+10 [ICON_STRENGTH] combat strength (Red Baron)</Text>
+		</Row>
+
+
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER" Language="en_US">
 			<Text>Percival E. Fansler</Text>
 		</Row>
@@ -79,6 +93,7 @@
 			<Text>Grants 1500 [ICON_CULTURE] Culture on standard speed. Must be activated on or adjacent to a reef.</Text>
 		</Row>
 
+		
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG" Language="en_US">
 			<Text>Carl Richard Nyberg</Text>
 		</Row>
@@ -86,11 +101,26 @@
 			<Text>Instantly builds a hangar and airport in this district. Airports grant +4 [ICON_PRODUCTION] Production.</Text>
 		</Row>
 
+		
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_FLOYD_FOGLEMAN" Language="en_US">
 			<Text>Floyd Fogleman</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_FLOYD_FOGLEMAN_ACTION" Language="en_US">
 			<Text>+20% [ICON_PRODUCTION] Production towards aircraft.</Text>
+		</Row>
+
+		
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_CLEMENT_ADER" Language="en_US">
+			<Text>Clément Ader</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_CLEMENT_ADER_ACTION" Language="en_US">
+			<Text>Aircraft carriers gain +10 [ICON_STRENGTH] combat strength. +30% [ICON_PRODUCTION] Production towards aircraft carriers.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_CLEMENT_ADER_COMBAT_BONUS_NAME" Language="en_US">
+			<Text>Clement-time</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_CLEMENT_ADER_COMBAT_BONUS_DESC" Language="en_US">
+			<Text>+10 [ICON_STRENGTH] combat strength (Clement Ader)</Text>
 		</Row>
 		
 
