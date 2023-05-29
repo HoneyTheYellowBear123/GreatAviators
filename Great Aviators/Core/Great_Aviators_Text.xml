@@ -101,6 +101,20 @@
 			<Text>Instantly builds a hangar and airport in this district. Airports grant +4 [ICON_PRODUCTION] Production.</Text>
 		</Row>
 
+
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC" Language="en_US">
+			<Text>Radoje Ljutovac</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_ACTION" Language="en_US">
+			<Text>Land based anti aircraft support units gain +10 anti aircraft strength.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RADOJE_LJUTOVAC_ANTI_AIRCRAFT_STRENGTH_NAME" Language="en_US">
+			<Text>Will of Radoje Ljutovac</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_ABILITY_RADOJE_LJUTOVAC_ANTI_AIRCRAFT_STRENGTH_DESC" Language="en_US">
+			<Text>+10 anti aircraft strength (Radoje Ljutovac)</Text>
+		</Row>
+
 		
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_FLOYD_FOGLEMAN" Language="en_US">
 			<Text>Floyd Fogleman</Text>
@@ -142,7 +156,7 @@
 			<Text>Ghost of Gustav Rasmus</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ABILITY_GUSTAV_RASMUS_ANTI_AIRCRAFT_BOATS_DESC" Language="en_US">
-			<Text>+10 anti aircraft strength</Text>
+			<Text>+10 anti aircraft strength (Gustav Rasmus)</Text>
 		</Row>
 		
 		
