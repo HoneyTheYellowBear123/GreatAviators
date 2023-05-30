@@ -194,6 +194,31 @@
 			<Text>Grants +50% [ICON_PRODUCTION] Production towards space race projects.</Text>
 		</Row>
 
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_1_NAME" Language="en_US">
+			<Text>Industrial Era</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_1_DESC" Language="en_US">
+			<Text>Just a regular ol' Industrial Era nothing to see here</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_2_NAME" Language="en_US">
+			<Text>Modern Era</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_2_DESC" Language="en_US">
+			<Text>Just a regular ol' Modern Era nothing to see here</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_3_NAME" Language="en_US">
+			<Text>Atomic Era</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_3_DESC" Language="en_US">
+			<Text>Just a regular ol' Atomic Era nothing to see here</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_4_NAME" Language="en_US">
+			<Text>Information Era</Text>
+		</Row>
+		<Row Tag="LOC_DUMMY_ERA_GREAT_AVIATORS_4_DESC" Language="en_US">
+			<Text>Just a regular ol' Information Era nothing to see here</Text>
+		</Row>
+
 		
 
 		
