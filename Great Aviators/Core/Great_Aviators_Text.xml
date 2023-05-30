@@ -14,16 +14,16 @@
 		</Row>
 
 		<Row Tag="LOC_POLICY_GREAT_AVIATOR_SMALL_NAME" Language="en_US">
-			<Text>great aviator policy small name</Text>
+			<Text>Air Shows</Text>
 		</Row>
 		<Row Tag="LOC_POLICY_GREAT_AVIATOR_SMALL_DESCRIPTION" Language="en_US">
 			<Text>+10 [Icon_GreatAviator] Great Aviator points per turn</Text>
 		</Row>
 		<Row Tag="LOC_POLICY_GREAT_AVIATOR_BIG_NAME" Language="en_US">
-			<Text>great aviator policy big name</Text>
+			<Text>Space Camp</Text>
 		</Row>
 		<Row Tag="LOC_POLICY_GREAT_AVIATOR_BIG_DESCRIPTION" Language="en_US">
-			<Text>great aviator policy big desc</Text>
+			<Text>+7 [Icon_GreatAviator] Great Aviator points per turn, and +12 [Icon_GreatAviator] Great Aviator points per turn for every airport.</Text>
 		</Row>
 
 		
