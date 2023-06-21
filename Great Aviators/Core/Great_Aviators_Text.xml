@@ -106,6 +106,15 @@
 			<Text>Hangars and Airports cost nothing to maintain and instead provide +6 [ICON_GOLD] Gold and +10 [ICON_GOLD] Gold respectfully.</Text>
 		</Row>
 
+
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_ALBERTO_SANTOS_DUMONT" Language="en_US">
+			<Text>Alberto Santos-Dumont</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_ALBERTO_SANTOS_DUMONT_ACTION" Language="en_US">
+			<Text>Gain +5% [ICON_SCIENCE] Science and +5% [ICON_CULTURE] Culture while not at war.</Text>
+		</Row>
+		
+		
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_AMELIA_EARHART" Language="en_US">
 			<Text>Amelia Earhart</Text>
 		</Row>
