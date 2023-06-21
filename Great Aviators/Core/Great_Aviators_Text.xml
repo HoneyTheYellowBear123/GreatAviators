@@ -69,7 +69,7 @@
 			<Text>René Lorin</Text>
 		</Row>
 		<Row Tag="LOC_GREAT_PERSON_AVIATOR_RENE_LORIN_ACTION" Language="en_US">
-			<Text>Air fighter units gain +1 [ICON_Range] attack range and air bomber units gain +2 [ICON_Range] attack range.</Text>
+			<Text>Air bomber units gain +2 [ICON_Range] attack range.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER_NAME" Language="en_US">
 			<Text>Rene's Range</Text>
@@ -78,10 +78,10 @@
 			<Text>+2 [ICON_Range] attack range (René Lorin)</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_NAME" Language="en_US">
-			<Text>Rene's Range</Text>
+			<Text>Chuck's Chuckle</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_DESC" Language="en_US">
-			<Text>+1 [ICON_Range] attack range (René Lorin)</Text>
+			<Text>+1 [ICON_Range] attack range (Chuck Yeager)</Text>
 		</Row>
 
 
@@ -177,6 +177,14 @@
 		</Row>
 		<Row Tag="LOC_UNIT_ABILITY_GUSTAV_RASMUS_ANTI_AIRCRAFT_BOATS_DESC" Language="en_US">
 			<Text>+10 anti aircraft strength (Gustav Rasmus)</Text>
+		</Row>
+		
+		
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_CHUCK_YEAGER" Language="en_US">
+			<Text>Chuck Yeager</Text>
+		</Row>
+		<Row Tag="LOC_GREAT_PERSON_AVIATOR_CHUCK_YEAGER_ACTION" Language="en_US">
+			<Text>Air fighter units gain +1 [ICON_Range] attack range.</Text>
 		</Row>
 		
 		

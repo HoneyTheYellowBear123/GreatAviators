@@ -9,12 +9,13 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (union officer of balloon reconnaissance)- observation balloons and drones + 1 sight and grants a free balloon
 		('UNIT_ABILITY_THADDEUS_S_C_LOWE_VISION', 'KIND_ABILITY'),
 		--('GREAT_PERSON_AVIATOR_CHARLES_E_TAYLOR', 'KIND_GREAT_PERSON_INDIVIDUAL'), --(mechanic for the wright brothers) - some mechanic to give a bonus to aircraft healing TO DO: modifiertype for bonus healing seems a little wacky lets get back to this
-		('GREAT_PERSON_AVIATOR_RENE_LORIN', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (accent on second e, patened the ramjet engine) - +2 range for bombers, +1 range for fighters
-		('UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER', 'KIND_ABILITY'),
+		('GREAT_PERSON_AVIATOR_RENE_LORIN', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (accent on second e, patened the ramjet engine) - +2 range for bombers, NO BONUS FOR FIGHTERS
+		('UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER', 'KIND_ABILITY'), --giving this to chuck yeager to balance the power
 		('UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER', 'KIND_ABILITY'),
 		('GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- $ red baron - fighters gain +10 combat strength against aircraft
 		('UNIT_ABILITY_RED_BARON_COMBAT_BONUS', 'KIND_ABILITY'),
 		('GREAT_PERSON_AVIATOR_PERCIVAL_E_FANSLER', 'KIND_GREAT_PERSON_INDIVIDUAL'),--$ (operated first airline? came up with first airline?) - aerodrome and its buildings now make gold instead of costing gold to maintain. (they don't cost much so probably have them pay out a lot) 
+		('GREAT_PERSON_AVIATOR_ALBERTO_SANTOS_DUMONT', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- +5% culture and science when not at war (steal this from geneva)
 		('GREAT_PERSON_AVIATOR_AMELIA_EARHART', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ gain 1500 culture (on standard speed) TO DO: grants sufferage (or extra culture if its already been discovered)
 		('GREAT_PERSON_AVIATOR_CARL_RICHARD_NYBERG', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ instantly build a hangar and airport, airports bonus production 
 		('GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (shot an aircraft with a regular cannon like a real playah) - land anti aircraft a bonus
@@ -25,6 +26,7 @@ VALUES  ('UNIT_GREAT_AVIATOR', 'KIND_UNIT'),
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- $ (invented helicopters and airships) - grants a helicopter with one promotion level, and 1 aluminum per turn.
 		('GREAT_PERSON_AVIATOR_GUSTAV_RASMUS', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (sounds like he came up with the idea of laser guided missiles? he makes more sense as land anti aircraft but dont worry about it) - someone to give navy units with anti aicraft power an increase to that value
 		('UNIT_ABILITY_GUSTAV_RASMUS_ANTI_AIRCRAFT_BOATS', 'KIND_ABILITY'),
+		('GREAT_PERSON_AVIATOR_CHUCK_YEAGER', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- +1 range for fighters, steal it from rene lorin
 		('GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ first to fly over everest, grant a culture bonus for adjacent mountains (bonus if those mountains are tundra or snowy)
 		--('GREAT_PERSON_AVIATOR_NEIL_ARMSTRONG', 'KIND_GREAT_PERSON_INDIVIDUAL'), -- ( buzz we love u too) -- all spaceport projects grant a culture bonus TO DO: I'll probably need to mess around in lua for this. It shouldn't be terrible, just need to check for active modifiers and then grant culture/science on certain named projection completion. 
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'KIND_GREAT_PERSON_INDIVIDUAL'), --$ (father of rocket propulsion) - +50% production towards spaceport projects yes I know he already exists but have you seen the rocket equation it is delicate and beautiful
@@ -80,7 +82,7 @@ VALUES  ('GREAT_PERSON_CLASS_AVIATOR', 'LOC_GREAT_PERSON_CLASS_AVIATOR_NAME', 'U
 
 INSERT INTO GreatPersonIndividuals
 		(GreatPersonIndividualType,					Name,											 GreatPersonClassType,			 eraType,									Gender, ActionCharges, ActionRequiresOwnedTile,       ActionRequiresUnownedTile,         ActionRequiresNoMilitaryUnit, ActionRequiresOnOrAdjacentFeatureType, ActionRequiresMilitaryUnitDomain, AreaHighlightRadius, ActionRequiresCompletedDistrictType,         ActionRequiresAdjacentMountain, ActionEffectTileHighlighting, ActionEffectTextOverride)
-VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_1',				'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,										0,							0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
+VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY',    'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,										0,							0,                 'LOC_GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_ACTION'  ), --LOC_GREATPERSON_ACTION_NAME_RETIRE
 		('GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_OLIVER_WRIGHT_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',				'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_WILBUR_WRIGHT_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE',		'LOC_GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE',		'GREAT_PERSON_CLASS_AVIATOR',    'DUMMY_ERA_GREAT_AVIATORS_2',		'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE_ACTION'  ),	
@@ -94,6 +96,7 @@ VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'LOC_GREAT_PERSON_AVIATOR_SIR
 		('GREAT_PERSON_AVIATOR_CLEMENT_ADER',		'LOC_GREAT_PERSON_AVIATOR_CLEMENT_ADER',		 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_3',				 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_CLEMENT_ADER_ACTION'  ),	
 		('GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT',	 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_4',				 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_GUSTAV_RASMUS', 'LOC_GREAT_PERSON_AVIATOR_GUSTAV_RASMUS',		 'GREAT_PERSON_CLASS_AVIATOR',		'DUMMY_ERA_GREAT_AVIATORS_4',			     'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_GUSTAV_RASMUS_ACTION'  ),	
+		('GREAT_PERSON_AVIATOR_CHUCK_YEAGER', 'LOC_GREAT_PERSON_AVIATOR_CHUCK_YEAGER',			 'GREAT_PERSON_CLASS_AVIATOR',		'DUMMY_ERA_GREAT_AVIATORS_1',			     'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_AERODROME',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_CHUCK_YEAGER_ACTION'  ),	
 		('GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'LOC_GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON',	 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_4',	 'M',    1,            0,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          NULL,										1,							1,                 'LOC_GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON_ACTION'  ),
 		('GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD', 'GREAT_PERSON_CLASS_AVIATOR', 'DUMMY_ERA_GREAT_AVIATORS_4',		 'M',    1,            1,				                    0,										0,      			  NULL,									NULL,                                  NULL,                          'DISTRICT_SPACEPORT',						0,							1,                 'LOC_GREAT_PERSON_AVIATOR_ROBERT_HUTCHINGS_GODDARD_ACTION'  );  
 
@@ -156,7 +159,7 @@ VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GE
 		(	'GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE', 'GREAT_PERSON_AVIATOR_THADDEUS_S_C_LOWE_MODIFIERID_2',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 
 		(	'GREAT_PERSON_AVIATOR_RENE_LORIN', 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
-		(	'GREAT_PERSON_AVIATOR_RENE_LORIN', 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+		--(	'GREAT_PERSON_AVIATOR_RENE_LORIN', 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'), --Yoinked over to chuck yeager
 
 		(	'GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN', 'GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
 
@@ -181,6 +184,8 @@ VALUES  (	'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY', 'GREAT_PERSON_AVIATOR_SIR_GE
 		(	'GREAT_PERSON_AVIATOR_HERMANN_GANSWINDT', 'GREAT_AVIATOR_GRANT_1_ALUMINUM_PER_TURN',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
 
 		(	'GREAT_PERSON_AVIATOR_GUSTAV_RASMUS', 'GREAT_PERSON_AVIATOR_GUSTAV_RASMUS_GRANT_ABILITY_MODIFIERID',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),
+
+		(	'GREAT_PERSON_AVIATOR_CHUCK_YEAGER', 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'), --yoinked from rene lorin
 
 		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
 		(	'GREAT_PERSON_AVIATOR_DOUGLAS_DOUGLAS_HAMILTON', 'GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',			'GREAT_PERSON_ACTION_ATTACHMENT_TARGET_UNIT_GREATPERSON'),--unique modifierid to prevent conflicts with other mods
@@ -209,9 +214,10 @@ VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYE
 
 
 		( 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID',	 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',       0,        1,          NULL     ),
-		( 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',	 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',       0,        1,          NULL     ),
+		( 'GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',	 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',       0,        1,          NULL     ), --actually belongs to chuck yeager now
 		('UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER_MODIFIERID',              'MODIFIER_UNIT_ADJUST_ATTACK_RANGE',         0,        0,          NULL     ),
-		('UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_MODIFIERID',              'MODIFIER_UNIT_ADJUST_ATTACK_RANGE',         0,        0,          NULL     ),
+		('UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_MODIFIERID',              'MODIFIER_UNIT_ADJUST_ATTACK_RANGE',         0,        0,          NULL     ), --actually belongs to chuck yeager now
+		
 
 		( 'GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN_MODIFIERID',	 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',       0,        1,          NULL     ),
 		( 'UNIT_ABILITY_RED_BARON_COMBAT_BONUS_MODIFIERID', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH',    0,        0,          NULL     ),
@@ -239,6 +245,8 @@ VALUES  ( 'GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1', 'MODIFIER_PLAYE
 
 		( 'GREAT_PERSON_AVIATOR_GUSTAV_RASMUS_GRANT_ABILITY_MODIFIERID',	 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY',       0,        1,          NULL     ),
 		( 'UNIT_ABILITY_GUSTAV_RASMUS_ANTI_AIRCRAFT_BOATS_MODIFIERID',		'MODIFIER_SINGLE_UNIT_ADJUST_ANTI_AIR_STRENGTH_MODIFIER',    0,        0,          NULL     ),
+
+		
 
 		( 'GREAT_AVIATOR_ADJACENT_GRASSMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
 		( 'GREAT_AVIATOR_ADJACENT_PLAINSMOUNTAIN_CULTURE',		'MODIFIER_PLAYER_UNIT_GRANT_ADJACENT_TERRAIN_YIELD',       1,        1,          NULL     ),
@@ -274,9 +282,9 @@ VALUES  ('GREAT_PERSON_AVIATOR_SIR_GEORGE_CAYLEY_MODIFIERID_1',  'TechType', 'TE
 
 
 		('GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID',  'AbilityType', 'UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER'),
-		('GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',  'AbilityType', 'UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER'),
+		('GREAT_PERSON_AVIATOR_RENE_LORIN_GRANT_ABILITY_MODIFIERID_2',  'AbilityType', 'UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER'), --actually belongs to chuck yeager now
 		('UNIT_ABILITY_RENE_LORIN_RANGE_BOMBER_MODIFIERID',  'Amount', 2),
-		('UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_MODIFIERID',  'Amount', 1),
+		('UNIT_ABILITY_RENE_LORIN_RANGE_FIGHTER_MODIFIERID',  'Amount', 1), --actually belongs to chuck yeager now
 
 
 		('GREAT_PERSON_AVIATOR_MANFRED_ALBRECHT_FREIHERR_VON_RICHTHOFEN_MODIFIERID',  'AbilityType', 'UNIT_ABILITY_RED_BARON_COMBAT_BONUS'),
