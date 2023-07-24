@@ -236,10 +236,17 @@
 			<Text>Just a regular ol' Information Era nothing to see here</Text>
 		</Row>
 
-		
 
+		
 		
 
 		<!--LOC_GREAT_PERSON_AVIATOR_RADOJE_LJUTOVAC_COMBAT_BONUS_PREVIEW-->
 	</LocalizedText>
+	<BaseGameText>
+		<!--Civlopedia-->
+		<Row tag="LOC_PEDIA_GREATPEOPLE_PAGE_GREAT_PERSON_AVIATOR_CHUCK_YEAGER_CHAPTER_HISTORY_PARA_1" >
+			<Text>Maharajadhiraj Prithvi Narayan Shah (1723–1775) was the last ruler of the Gorkha Kingdom and first monarch of the Kingdom of Nepal (also called Kingdom of Gorkha). Prithvi Narayan Shah started the unification of Nepal. Shah proclaimed the newly unified Kingdom of Nepal as Asal Hindustan ("Real Land of Hindus") due to North India being ruled by the Islamic Mughal rulers. He also referred to the rest of Northern India as Mughlan (Country of Mughals). Prithvi Narayan Shah is considered as the Father of the Nation in Nepal. Before Prithvi Narayan Shah's unification movement, there were a total of 54 states in Nepal. In the South-Eastern Terai, there were three Sen states: Makawanpur, Bijayapur, and Chaudandi. In the West, from Gorkha to Gandaki Province, there were 24 states. In the province of Karnali, there were 22 states with Kalyan, Samaal, Shahi and Chand dynasties. Along with Gorkha and Mustang, Bhaktapur, Kantipur and Lalitpur made up the remaining five states. When Prithvi Narayan Shah had ascended to the throne of Gorkha in the year 3 April 1743 A.D, it was yet a small state. He then started to contemplate the methods to turn Gorkha into a huge and strong state. He went to Varanasi to gain first-hand knowledge about the neighbouring states and about India to the south. During those days, Varanasi was one of the large trade centres of India where people from different places gathered. He met with different types of people and gained valuable understandings regarding the Political and Social conditions of the Indian Sub-Continent. In Varanasi, his father-in-law Abhiman Singh, a Rajput Chief, procured for him some firearms and a quantity of ammunition. King Prithvi Narayaṇ Shah was ultimately able to capture small principalities and annex them into the kingdom. This expansion was crucial to ensure the continued survival of the Kingdom of Nepal as the East India Company was already expanding into the Indian subcontinent from their base in Bengal. Shah was convinced that the company would eventually conquer the regions bordering Nepal to the south and approach Nepal. He believed that if Nepal remained a collection of fifty principalities, then it would easily be defeated and conquered in the event of a war with the company or any other foreign power. Expanding his kingdom ensured that Nepal would remain an independent state and be able to negotiate with a foreign power on equal terms. His military strategy proved effective in the hills and mountains of Nepal, keeping rival militaries starved for supplies and unable to coalesce into a force that could overwhelm him in a pitched battle.</Text>
+		</Row>
+	
+	</BaseGameText>
 </GameData>
